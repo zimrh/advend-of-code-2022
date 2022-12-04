@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,28 +9,24 @@ namespace Day1
 {
     internal class ElfLoader
     {
-        public static List<Elf> Load(string caloriesFilePath)
+        public static async Task<List<Elf>> LoadAsync(string caloriesFilePath)
         {
-            using var caloriesFile = File.OpenText(caloriesFilePath);
-
             var elfs = new List<Elf>();
             var items = new List<int>();
 
-            do
+            await foreach(var line in FileLoader.GetLinesAsync(caloriesFilePath))
             {
-                var input = caloriesFile.ReadLine();
-                if (String.IsNullOrWhiteSpace(input))
+                if (string.IsNullOrWhiteSpace(line))
                 {
                     elfs.Add(new Elf(items));
                     items.Clear();
                 }
                 else
                 {
-                    var intValue = Convert.ToInt32(input);
+                    var intValue = Convert.ToInt32(line);
                     items.Add(intValue);
                 }
-
-            } while(!caloriesFile.EndOfStream);
+            }
 
             elfs.Add(new Elf(items));
 

@@ -2,7 +2,7 @@
 
 var caloriesPath = "calories.txt";
 
-var elves = ElfLoader.Load(caloriesPath);
+var elves = await ElfLoader.LoadAsync(caloriesPath);
 Console.WriteLine($"Elves loaded: {elves.Count}");
 
 // Could use foreach and store values etc but going with a LINQ expression for now
