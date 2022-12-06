@@ -4,11 +4,22 @@ December again, what happened to the year! Setting off on another elf adventure
 
 Join in the fun at [adventofcode.com](https://adventofcode.com/2022)
 
+## Build
+
+Trying out github actions, so far very impressed.  
+
+| Action | Status |
+|--------------|---|
+| Build Status | [![.NET](https://github.com/zimrh/advent-of-code-2022/actions/workflows/dotnet.yml/badge.svg)](https://github.com/zimrh/advent-of-code-2022/actions/workflows/dotnet.yml) |
+| Unit Tests | TBD |
+
 ## Thoughts
 
 ### General
 
-Testcase instead of console app?
+Testcase instead of console app? 
+
+Oh definitely this now that we have github actions!  I wonder if we can break the build and unit tests into two different actions which hopefully can be linked.  i.e. build > unit tests instead of all in one action
 
 ### Day 4
 
