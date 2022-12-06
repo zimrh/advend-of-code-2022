@@ -8,49 +8,56 @@ namespace Day6
 {
     internal class SignalAnalyzer
     {
-        public static int FindStartOfPacketMarker(string signal)
+        private readonly Queue<char> _buffer = new();
+        public int BlockSize = 0;
+        public int MessagePosition = 0;
+        public int MarkerPosition = -1;
+        public bool MarkerFound = false;
+
+        public SignalAnalyzer(int blockSize)
         {
-            return FindUniqueCharacterBlock(signal, 4);
+            BlockSize = blockSize;
         }
 
-        internal static object FindStartOfMessageMarker(string signal)
+        public void AddInput(char input)
         {
-            return FindUniqueCharacterBlock(signal, 14);
-        }
+            _buffer.Enqueue(input);
 
-        private static int FindUniqueCharacterBlock(string signal, int length)
-        {
-            var markerCounter = new Dictionary<char, int>();
+            MessagePosition++;
 
-            for (var i = 0; i < signal.Length; i++)
+            if (_buffer.Count > BlockSize)
             {
-                var input = signal[i];
-
-                if (!markerCounter.ContainsKey(input))
-                {
-                    markerCounter[input] = 0;
-                }
-
-                markerCounter[input]++;
-
-                if (i > length - 1)
-                {
-                    markerCounter[signal[i - length]]--;
-                }
-
-                if (MarkerPresent(markerCounter, length))
-                {
-                    return i + 1;
-                }
-
+                _buffer.Dequeue();
             }
 
-            return -1;
+            CheckForUniqueCharacterBlock(_buffer, BlockSize);
         }
 
-        private static bool MarkerPresent(Dictionary<char, int> markerCounter, int markerLength)
+        private void CheckForUniqueCharacterBlock(Queue<char> buffer, int length)
         {
-            var uniqueCount = markerCounter.Where(m => m.Value == 1);
+            var marker = new Dictionary<char, bool>();
+
+            foreach (var c in buffer.ToList())
+            {
+                if (marker.ContainsKey(c))
+                {
+                    return;
+                }
+
+                marker[c] = true;
+            }
+
+            if (MarkerPresent(marker, length))
+            {
+                // Would probably set this to trigger an event instead of setting a flag
+                MarkerFound = true;
+                MarkerPosition = MessagePosition;
+            }
+        }
+
+        private static bool MarkerPresent(Dictionary<char, bool> marker, int markerLength)
+        {
+            var uniqueCount = marker.Where(m => m.Value == true);
             return uniqueCount.Count() == markerLength;
         }
     }
