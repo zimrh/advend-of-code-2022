@@ -30,7 +30,7 @@ so sketched the following very roughly on a piece of paper I had handy:
 
 Helped with the logic for `Contains` and `HasAnyOverlap`
 
-### Day 7
+### Day 6
 
 I have written two different signal analyzers for this solution, the first implementation assumes 
 that you will be able to read and store the entire signal before analyzing it. I have put the code
@@ -38,7 +38,7 @@ for that in the `StaticSignalAnalyzer.cs`
 
 HOWEVER!
 
-Based on previous work I have done with DMX signals you will very rarely be able to or event want
+Based on previous work I have done with DMX signals you will very rarely be able to or even want
 to read the entire signal into memory and then analyze it.
 
 I have therefore written additional code to accept one character at a time (as if it was coming off

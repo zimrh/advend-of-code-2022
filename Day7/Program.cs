@@ -1,5 +1,4 @@
-﻿
-using Day7;
+﻿using Day7;
 
 var consoleOutputFile = "console-output.txt";
 var folders = await ConsoleParser.ParseAsync(consoleOutputFile);
