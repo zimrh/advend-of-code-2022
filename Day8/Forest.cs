@@ -136,12 +136,12 @@ namespace Day8
             return true;
         }
 
-        public Dictionary<Directions, Dictionary<string, int>> Instructions = new Dictionary<Directions, Dictionary<string, int>> 
+        public Dictionary<Directions, Dictionary<string, int>> Instructions = new()
         {
-            { Directions.North, new Dictionary<string, int> {{ "xStep", -1 }, { "yStep", 0 }}},
-            { Directions.South, new Dictionary<string, int> {{ "xStep", 1 }, { "yStep", 0 }}},
-            { Directions.West, new Dictionary<string, int> {{ "xStep", 0 }, { "yStep", -1 }}},
-            { Directions.East, new Dictionary<string, int> {{ "xStep", 0 }, { "yStep", 1 }}}
+            { Directions.North, new() {{ "xStep", -1 }, { "yStep", 0 }}},
+            { Directions.South, new() {{ "xStep", 1 }, { "yStep", 0 }}},
+            { Directions.West, new() {{ "xStep", 0 }, { "yStep", -1 }}},
+            { Directions.East, new() {{ "xStep", 0 }, { "yStep", 1 }}}
         };
 
     }
