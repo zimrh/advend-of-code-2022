@@ -47,3 +47,10 @@ a stream) and to set a flag and record a position once the specified marker is r
 Ideally I would create an event that the consumer could subscribe to and which would fire when the 
 marker is reached but this will do for now.  If I get enough free time I will come back around to
 this question and rework it.
+
+### Day 9
+
+After all these years and I can still hear my Maths teacher: "Always read the entire question!!!!"
+Was counting the total times the tail end moved rather than the count of the places it has been.
+
+Once I resolved that things worked!
