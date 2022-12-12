@@ -19,7 +19,9 @@ Trying out github actions, so far very impressed.
 
 Testcase instead of console app? 
 
-Oh definitely this now that we have github actions!  I wonder if we can break the build and unit tests into two different actions which hopefully can be linked.  i.e. build > unit tests instead of all in one action
+Oh definitely this now that we have github actions!  I wonder if we can break the build and unit
+tests into two different actions which hopefully can be linked.  i.e. build > unit tests instead
+of all in one action
 
 ### Day 4
 
@@ -54,3 +56,24 @@ After all these years and I can still hear my Maths teacher: "Always read the en
 Was counting the total times the tail end moved rather than the count of the places it has been.
 
 Once I resolved that things worked!
+
+### Day 11
+
+Not a good day, I definitely do not deserve that second star... though now I have to go learn 
+some maths in the morning...
+
+It's currently just after 1:20 am in the morning so maybe I should say later today...
+
+Yeah, this one was rough, also Kudos to Andrew Rylatt for the link in his code because, bleh... 
+I was just about to throw my machine out the window at this point.  So many different attempts
+to keep worry down and just... bleh...
+
+A joke from AoC reddit which is appropriate:
+
+Credit: [u/OsipXD](https://www.reddit.com/user/OsipXD)
+
+https://www.reddit.com/r/adventofcode/comments/ziu6b6/2022_day_11_part_2_but_it_still_not_works/
+
+Also details on what exactly this is and how it works... will read in the morning
+
+Too tired now https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n
