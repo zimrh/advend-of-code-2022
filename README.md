@@ -82,7 +82,7 @@ Too tired now https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_mod
 
 So been struggling with an issue on this coding challenge where I appeared to be 2 out (getting `422` instead of the expected `420`)
 
-Thank you to my brother for running my question so I knew what I was out by.
+Thank you to my brother for running my question so I knew what the expected answer was and how far I was out by.
 
 Finally worked it out, so I was setting my code to give the end `E` a value of `(byte)'a' - 1` and the start `S` a value of `(byte)'z' + 1`
 
@@ -95,3 +95,5 @@ This was adding an additional two steps!  After setting the `S` to a value of `a
 ![The Correct Solution](./Day12/TheCorrectSolution.png)
 
 The Sample has a straight run up to the end so was not seeing the issue there!  This one was annoying because I thought I was messing up the routing!
+
+I had seen the "bump" but had assumed (you know what they say!) that it was not an issue.  Learnt my lesson :)
