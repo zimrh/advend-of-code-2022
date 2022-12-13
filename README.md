@@ -97,3 +97,9 @@ This was adding an additional two steps!  After setting the `S` to a value of `a
 The Sample has a straight run up to the end so was not seeing the issue there!  This one was annoying because I thought I was messing up the routing!
 
 I had seen the "bump" but had assumed (you know what they say!) that it was not an issue.  Learnt my lesson :)
+
+## Day 13
+
+Thank goodness, an easy one! Restore my faith in this stuff.  Plus have now caught up again
+
+Lots of recursion but was the quickest and easiest way to get it done.
