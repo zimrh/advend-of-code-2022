@@ -77,3 +77,21 @@ https://www.reddit.com/r/adventofcode/comments/ziu6b6/2022_day_11_part_2_but_it_
 Also details on what exactly this is and how it works... will read in the morning
 
 Too tired now https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n
+
+### Day 12
+
+So been struggling with an issue on this coding challenge where I appeared to be 2 out (getting `422` instead of the expected `420`)
+
+Thank you to my brother for running my question so I knew what I was out by.
+
+Finally worked it out, so I was setting my code to give the end `E` a value of `(byte)'a' - 1` and the start `S` a value of `(byte)'z' + 1`
+
+This meant that when it came to the final steps leading up to the end `E` it was doing this little jump to the `right`, `up` and `left`:
+
+![The Problem](./Day12/TheProblem.png)
+
+This was adding an additional two steps!  After setting the `S` to a value of `a` and `E` to `z` we finally get the correct answer:
+
+![The Correct Solution](./Day12/TheCorrectSolution.png)
+
+The Sample has a straight run up to the end so was not seeing the issue there!  This one was annoying because I thought I was messing up the routing!
